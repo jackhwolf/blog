@@ -1,0 +1,31 @@
+$mainpadding: 5px;
+
+.main {
+  // margin: $mainpadding;
+  // padding: $mainpadding
+}
+
+.maincontainer {
+  // border: 5px solid black;
+  // margin: $mainpadding
+  background-color: #7C94B5;
+  flex: 1;
+}
+
+.mainrow {
+  // border: 5px solid blue;
+  // margin: $mainpadding;
+
+}
+
+.sidecol {
+  // border: 5px solid yellow;
+  // margin: $mainpadding;
+  // padding: $mainpadding;
+}
+
+.maincol {
+  // border: 5px solid green;
+  // margin: $mainpadding;
+  padding-right: $mainpadding;
+}

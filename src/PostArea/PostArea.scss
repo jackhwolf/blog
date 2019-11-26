@@ -1,0 +1,39 @@
+$shadow: 8px 8px teal;
+
+.postarea {
+
+}
+
+.postitem {
+  padding: 10px;
+  margin: 5px;
+  width: 60rem;
+  // border: 2px dashed red;
+  // border-radius: 10px;
+}
+
+.postitemcard {
+  background-color: teal;
+  box-shadow: $shadow;
+}
+
+.featuredheader {
+
+}
+
+.cardbody {
+
+}
+
+.cardtext {
+
+}
+
+.posttag {
+  margin: 15px;
+  box-shadow: $shadow;
+}
+
+.cardtag {
+  color: red;
+}

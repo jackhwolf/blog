@@ -1,0 +1,19 @@
+$shadow: 8px 8px peru;
+
+.header {
+  margin: 0px 5px 5px 5px;
+  padding-bottom: 10px;
+}
+
+.headerbar {
+  border-radius: 4px;
+  height: 4rem;
+  // box-shadow: $shadow;
+  background-color: indianred;
+  font-family: monospace;
+  font-size: 25px;
+}
+
+.myname {
+  font-weight: bold;
+}

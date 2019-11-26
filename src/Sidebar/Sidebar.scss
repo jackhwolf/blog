@@ -1,0 +1,49 @@
+$shadow: 8px 8px #AE1B9A;
+
+.outercard {
+  box-shadow: 3px 3px #992999;
+}
+
+.sidebartitle {
+  margin: 5px 5px 25px 5px;
+  box-shadow: $shadow;
+  height: 3rem;
+}
+
+.sidebartitletext {
+    font-weight: bold;
+    font-size: 20px;
+    margin: 5px;
+}
+
+.sidebar {
+  // border: 2px dashed teal;
+  // border-radius: 10px;
+  padding-right: 20px;
+  // border-right: 5px dashed black;
+}
+
+.sidebarcontainer {
+  margin-bottom: 10px;
+}
+
+.sidebaritem {
+  margin: 5px;
+  box-shadow: $shadow;
+}
+
+// .featuredheader {
+
+// }
+
+// .cardbody {
+
+// }
+
+// .cardtitle {
+
+// }
+
+// .cardtext {
+
+// }

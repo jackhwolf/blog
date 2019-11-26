@@ -1,0 +1,37 @@
+$shadow: 8px 8px forestgreen;
+
+.footer {
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+.footercard {
+  height: 8rem;
+  // box-shadow: $shadow;
+}
+
+.footerimg {
+  padding-bottom: 6px;
+  box-shadow: 0 4px 2px -2px gray;
+}
+
+
+
+// <Container fluid={true} className="justify-content-md-center footer">
+//   <Card border="info" fluid={true} className="justify-content-md-center footercard">
+//     <Container fluid={true} className="justify-content-md-center">
+//       <Row fluid={true} className="justify-content-md-center">
+//         <Col className="justify-content-md-center footerimgcont">
+//           <Image src={aws} rounded style={this.imgstyle}/>
+//         </Col>
+//         <Col fluid={true} className="footerimgcont">
+//           <Image src={flask} rounded style={this.imgstyle}/>
+//         </Col>
+//         <Col fluid={true} className="footerimgcont">
+//           <Image src={reactjs} rounded style={this.imgstyle}/>
+//         </Col>
+//       </Row>
+//     </Container>
+//   </Card>
+// </Container>
+// </>
