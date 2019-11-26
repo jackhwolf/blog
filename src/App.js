@@ -32,21 +32,19 @@ class App extends React.Component {
 
   render() {
     return (
-      <p>Hello</p>
+      <Switch>
+
+        <Route exact path='/'
+          render = {() => <Landing/>}
+        />
+
+        <Route exact path='/about' render={(props) => this.renderPost(props)}></Route> 
+
+        <Route path='/post/:id' render={(props) => this.renderPost(props)}/>
+
+      </Switch>
     );
   }
 }
-
-{/* <Switch>
-
-  <Route exact path='/'
-    render={() => <Landing />}
-  />
-
-  <Route exact path='/about' render={(props) => this.renderPost(props)}></Route>
-
-  <Route path='/post/:id' render={(props) => this.renderPost(props)} />
-
-</Switch> */}
 
 export default App;
