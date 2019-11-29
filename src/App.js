@@ -18,7 +18,7 @@ class App extends React.Component {
 
   renderPost(props) {
     var postid = props.match.path === '/about' ? "about" : props.match.params.id
-    var fname = './posts/' + postid + '/markdown/post.md'
+    var fname = './posts/' + postid + '/post.md'
     const file = require("" + fname)
     const resp = fetch(file)
       .then(response => {
