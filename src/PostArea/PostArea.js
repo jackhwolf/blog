@@ -18,7 +18,7 @@ class PostArea extends React.Component {
     const resp = await fetch(this.endpoint)
       .then(x => x.json())
     console.log(resp)
-    posts = resp[0]['data']
+    posts = resp['data']
     var postitems = []
     for (const x of posts) {
       postitems.push(
