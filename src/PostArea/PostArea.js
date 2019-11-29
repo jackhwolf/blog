@@ -5,8 +5,9 @@ import PostItem from './PostItem.js';
 class PostArea extends React.Component {
 
   constructor(props) {
+    console.log("[PostArea] constructor")
     super(props)
-    this.endpoint = 'http://13.56.250.168/v1/blogpost'
+    this.endpoint = 'https://cors-anywhere.herokuapp.com/http://13.56.250.168/v1/blogpost'
     this.state = {
       postitems: []
     }
@@ -17,16 +18,16 @@ class PostArea extends React.Component {
     var posts = []
     const resp = await fetch(this.endpoint)
       .then(x => x.json())
-      .then(x => posts.push(x))
-    posts = posts[0]['data']
-    var postitems = []
-    for (const x of posts) {
-      postitems.push(
-        <PostItem key={x['postid']} postID={x['postid']} 
-                  postTitle={x['post']['title']} postDesc={x['post']['desc']}/>
-      )
-    }
-    this.setState({postitems: postitems})
+    console.log(resp)
+    // posts = posts[0]['data']
+    // var postitems = []
+    // for (const x of posts) {
+    //   postitems.push(
+    //     <PostItem key={x['postid']} postID={x['postid']} 
+    //               postTitle={x['post']['title']} postDesc={x['post']['desc']}/>
+    //   )
+    // }
+    // this.setState({postitems: postitems})
   }
 
   render() {
