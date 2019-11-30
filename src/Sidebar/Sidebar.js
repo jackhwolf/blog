@@ -11,7 +11,6 @@ class Sidebar extends React.Component {
 
   constructor(props) {
     super(props)
-    this.sidebaritems = [];
     this.sidebarcardstyle = {
       backgroundColor: "#999999",
       width: '18rem',
@@ -19,9 +18,6 @@ class Sidebar extends React.Component {
     }
     this.titlecardstyle = {
       backgroundColor: "#F0E3EF"
-    }
-    this.state = {
-      sidebaritems: []
     }
   }
 
