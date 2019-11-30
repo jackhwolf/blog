@@ -29,7 +29,7 @@ class Landing extends React.Component {
             <Col><Header/></Col>
           </Row>
           <Row className="justify-content-md-center mainrow">
-            <Col xs={3} md={2} fluid={"true"} className="farleft sidecol"><Sidebar/></Col>
+            {/*<Col xs={3} md={2} fluid={"true"} className="farleft sidecol"><Sidebar/></Col>*/}
             <Col fluid={"true"} className="maincol"><PostArea search={this.state.search}/></Col>
           </Row>
           <Row className="justify-content-md-center" fluid={"true"}>

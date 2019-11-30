@@ -16,20 +16,6 @@ class PostArea extends React.Component {
     this.changeSearch = this.changeSearch.bind(this)
   }
 
-  changeSearch(search) {
-    var display = []
-    for (const x of this.state.posts) {
-      if (search === undefined || x['post']['tags'].indexOf(search) >= 0) {
-        display.push(
-          <PostItem key={x['postid']} postID={x['postid']}
-            postTitle={x['post']['title']} postDesc={x['post']['desc']}
-            postTags={x['post']['tags']} changeSearch={this.changeSearch} />
-        )
-      }
-    }
-    this.setState({display: display})
-  }
-
   // fetch post info
   async componentDidMount() {
     const resp = await fetch(this.endpoint).then(x => x.json())
@@ -46,6 +32,20 @@ class PostArea extends React.Component {
       }
     }
     this.setState({postitems: postitems, display: postitems, posts: resp['data']})
+  }
+
+  changeSearch(search) {
+    var display = []
+    for (const x of this.state.posts) {
+      if (search === undefined || x['post']['tags'].indexOf(search) >= 0) {
+        display.push(
+          <PostItem key={x['postid']} postID={x['postid']}
+            postTitle={x['post']['title']} postDesc={x['post']['desc']}
+            postTags={x['post']['tags']} changeSearch={this.changeSearch} />
+        )
+      }
+    }
+    this.setState({ display: display })
   }
 
   render() {
