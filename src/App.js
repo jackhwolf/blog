@@ -31,7 +31,7 @@ class App extends React.Component {
   }
 
   renderLanding(props) {
-    return <Landing search={props.match.params.search} />
+    return <Landing search={props.match.params.q} />
   }
 
   render() {
