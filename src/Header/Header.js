@@ -42,12 +42,9 @@ class Header extends React.Component {
   }
 
   submit() {
-    console.log("Current search: ")
-    var cv = this.searchEntry.current.value
-    console.log(cv)
-    if (cv != "") {
+    if (this.searchEntry.current.value != "") {
       this.props.history.push({
-        pathname: '/search/' + cv
+        pathname: '/search/' + this.searchEntry.current.value
       })
       ReactDOM.findDOMNode(this.searchForm).reset();
     }
@@ -64,8 +61,8 @@ class Header extends React.Component {
           </Nav>
           <Form inline id='searchForm' className='searchForm' ref={this.searchForm}>
               <FormControl type="text" placeholder="Enter search" className="mr-sm-2" ref={this.searchEntry}/>
+              <Button variant="info" onClick={this.submit}>search!</Button>
           </Form>
-          <Button variant="info" onClick={this.submit}>search blog!</Button>
         </Navbar>
       </div>
       </>
