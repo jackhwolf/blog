@@ -23,16 +23,17 @@ class Header extends React.Component {
   }
 
   goToAbout() {
-    this.props.history.push({
-      pathname: '/'
-    })
+    // this.props.history.push({
+    //   pathname: '/'
+    // })
+    console.log("Hello")
   }
 
   getLinks() {
     var links = [];
     var k = 0
     this.links.forEach(elem => {
-      links.push(<Nav.Link key={k} href={elem[0]}>{elem[1]}</Nav.Link>);
+      links.push(<Nav.Link key={k} onSelect={this.goToAbout}>{elem[1]}</Nav.Link>);
       k += 1
     });
     return links;
