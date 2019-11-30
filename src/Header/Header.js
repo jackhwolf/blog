@@ -13,7 +13,7 @@ class Header extends React.Component {
   constructor(props) {
     super(props)
     this.links = [
-      ["/blog/post/about", "/post/about", "About me"],
+      ["/blog/post/about", "/post/about", "About"],
       ["/blog/", "/", "Home"]
     ]
     this.goTo = this.goTo.bind(this)
@@ -25,7 +25,7 @@ class Header extends React.Component {
   goTo(path) {
     this.props.history.push({
       pathname: path,
-      state: { search: undefined, check: true }
+      state: { search: undefined }
     })
   }
 
