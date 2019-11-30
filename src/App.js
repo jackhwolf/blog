@@ -46,7 +46,7 @@ class App extends React.Component {
 
         <Route path={'/post/:id'} render={(props) => this.renderPost(props)}/>
 
-        <Route path={'/search/:search'} render={(props) => this.renderLanding(props)}/>
+        <Route path={'/search/:q'} render={(props) => this.renderLanding(props)}/>
 
       </Switch>
     );
