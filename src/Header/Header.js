@@ -42,8 +42,9 @@ class Header extends React.Component {
   }
 
   submit() {
+    console.log("Current search: ")
     var cv = this.searchEntry.current.value
-    console.log("Current search: " + cv)
+    console.log(cv)
     if (cv != "") {
       console.log(this.searchEntry.current.value)
       this.props.history.push({
