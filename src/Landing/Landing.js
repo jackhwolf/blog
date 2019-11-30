@@ -22,11 +22,11 @@ class Landing extends React.Component {
     return (
       <div className="main">
         <Container className="maincontainer" fluid={"true"}>
-          <Row className="farleft mainrow" fluid={"true"}>
+          <Row className="mainrow" fluid={"true"}>
             <Col><Header/></Col>
           </Row>
           <Row className="justify-content-md-center mainrow">
-            <Col xs={3} md={2} fluid={"true"} className="sidecol"><Sidebar/></Col>
+            <Col xs={3} md={2} fluid={"true"} className="farleft sidecol"><Sidebar/></Col>
             <Col fluid={"true"} className="maincol"><PostArea search={this.props.match.params.search}/></Col>
           </Row>
           <Row className="justify-content-md-center" fluid={"true"}>
