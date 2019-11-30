@@ -24,7 +24,6 @@ class App extends React.Component {
         return marked(text)
       })
     return resp
-    // return <Post postid={this.state.postid} markdown={resp} />
   }
 
   renderPost(props) {

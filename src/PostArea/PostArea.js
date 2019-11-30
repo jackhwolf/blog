@@ -16,11 +16,7 @@ class PostArea extends React.Component {
     this.changeSearch = this.changeSearch.bind(this)
   }
 
-  changeSearch(msearch) {
-    this.filter(msearch)
-  }
-
-  filter(search) {
+  changeSearch(search) {
     var display = []
     for (const x of this.state.posts) {
       if (search === undefined || x['post']['tags'].indexOf(search) >= 0) {
@@ -31,16 +27,12 @@ class PostArea extends React.Component {
         )
       }
     }
-    console.log(display.length)
     this.setState({display: display})
   }
 
   // fetch post info
   async componentDidMount() {
-    console.log("did mount:", this.state.search)
-    console.log(this.state.search)
-    const resp = await fetch(this.endpoint)
-      .then(x => x.json())
+    const resp = await fetch(this.endpoint).then(x => x.json())
     var posts = resp['data']
     var postitems = []
     for (const x of posts) {

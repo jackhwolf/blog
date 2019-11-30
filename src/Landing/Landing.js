@@ -16,6 +16,9 @@ class Landing extends React.Component {
 
   constructor(props) {
     super(props)
+    this.state = {
+      search: this.props.match.params.q
+    }
   }
 
   render () {
@@ -27,7 +30,7 @@ class Landing extends React.Component {
           </Row>
           <Row className="justify-content-md-center mainrow">
             <Col xs={3} md={2} fluid={"true"} className="farleft sidecol"><Sidebar/></Col>
-            <Col fluid={"true"} className="maincol"><PostArea search={this.props.match.params.search}/></Col>
+            <Col fluid={"true"} className="maincol"><PostArea search={this.state.search}/></Col>
           </Row>
           <Row className="justify-content-md-center" fluid={"true"}>
             <Col fluid={"true"}><Footer/></Col>

@@ -24,7 +24,8 @@ class Header extends React.Component {
 
   goTo(path) {
     this.props.history.push({
-      pathname: path
+      pathname: path,
+      state: { search: undefined, check: true }
     })
   }
 
@@ -33,7 +34,7 @@ class Header extends React.Component {
     var k = 0
     this.links.forEach(elem => {
       links.push(
-        <Button key={k} onClick={() => this.goTo(elem[0])} style={{paddingRight: '5px'}}>{elem[1]}</Button>
+        <Nav.Link key={k} href="/" onClick={() => this.goTo(elem[0])} style={{paddingRight: '5px'}}>{elem[1]}</Nav.Link>
       );
       k += 1
     });

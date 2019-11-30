@@ -29,12 +29,17 @@ class PostTag extends React.Component {
 
   searchTag() {
     this.props.callback(this.state.tag)
+    this.props.history.push({
+      pathname: '/search/' + this.state.tag
+    })
   }
 
   render() {
     return (
       <Card.Link className="cardtag"
-        onClick={() => this.searchTag()}>{this.state.tag}</Card.Link>
+        onClick={() => this.searchTag()}
+        style={{textDecoration: 'underline', 
+                fontSize: 'medium'}}>{this.state.tag}</Card.Link>
     )
   }
 }
