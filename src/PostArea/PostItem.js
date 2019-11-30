@@ -93,9 +93,11 @@ class PostItem extends React.Component {
       <>
         <Container fluid={"true"} className="postitem">
           <Row className="justify-content-md-center">
-            <Col fluid={"true"}>
-              <PostDate postdate={this.state.postdate}/>
-            </Col>
+            {/* 
+              <Col fluid={"true"}>
+                <PostDate postdate={this.state.postdate}/>
+              </Col>
+            */}
             <Col fluid={"true"}>
               <Card style={this.cardstyle} border="info" className="postitemcard" fluid={"true"}>
                 <Card.Header className="featuredheader">{this.state.title}</Card.Header>
