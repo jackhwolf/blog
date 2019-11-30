@@ -22,11 +22,10 @@ class Header extends React.Component {
     this.searchEntry = React.createRef()
   }
 
-  goToAbout() {
-    // this.props.history.push({
-    //   pathname: '/'
-    // })
-    console.log("Hello")
+  goToAbout(path) {
+    this.props.history.push({
+      pathname: path
+    })
   }
 
   getLinks() {
@@ -34,7 +33,7 @@ class Header extends React.Component {
     var k = 0
     this.links.forEach(elem => {
       links.push(
-        <Button key={k} onClick={this.goToAbout}>{elem[1]}</Button>
+        <Button key={k} onClick={() => this.goToAbout(elem[0])} style={{paddingRight: '5px'}}>{elem[1]}</Button>
       );
       k += 1
     });
