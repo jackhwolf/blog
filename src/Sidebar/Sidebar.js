@@ -23,9 +23,11 @@ class Sidebar extends React.Component {
   }
 
   fillSidebar() {
+    var s = []
     for (var i=0; i<3; i++) {
-      this.sidebaritems.push(<SidebarItem key={i}/>)
+      s.push(<SidebarItem key={i}/>)
     }
+    this.sidebaritems = s
     return this.sidebaritems
   }
 
