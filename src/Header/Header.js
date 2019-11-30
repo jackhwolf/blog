@@ -46,7 +46,6 @@ class Header extends React.Component {
     var cv = this.searchEntry.current.value
     console.log(cv)
     if (cv != "") {
-      console.log(this.searchEntry.current.value)
       this.props.history.push({
         pathname: '/search/' + cv
       })
