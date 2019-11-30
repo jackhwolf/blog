@@ -19,14 +19,17 @@ class Landing extends React.Component {
     this.state = {
       search: this.props.match.params.q
     }
+    this.changeSearch = this.changeSearch.bind(this)
   }
+
+  changeSearch(search) { this.setState({search: search}) }
 
   render () {
     return (
       <div className="main">
         <Container className="maincontainer" fluid={"true"}>
           <Row className="mainrow" fluid={"true"}>
-            <Col><Header/></Col>
+            <Col><Header handler={this.changeSearch}/></Col>
           </Row>
           <Row className="justify-content-md-center mainrow">
             {/*<Col xs={3} md={2} fluid={"true"} className="farleft sidecol"><Sidebar/></Col>*/}

@@ -48,6 +48,7 @@ class Header extends React.Component {
       this.props.history.push({
         pathname: '/search/' + csv
       })
+      this.props.handler(csv)
       ReactDOM.findDOMNode(this.searchForm).reset();
     }
   }
