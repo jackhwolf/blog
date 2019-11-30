@@ -22,7 +22,10 @@ class Landing extends React.Component {
     this.changeSearch = this.changeSearch.bind(this)
   }
 
-  changeSearch(search) { this.setState({search: search}) }
+  changeSearch(search) { 
+    console.log("change search")
+    this.setState({search: search}) 
+  }
 
   render () {
     return (
