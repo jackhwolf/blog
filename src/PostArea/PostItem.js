@@ -94,7 +94,7 @@ class PostItem extends React.Component {
       <>
         <Container fluid={"true"} className="postitem">
           <Row>
-            <Col fluid={"true"}>
+            <Col>
               <PostDate postdate={this.state.postdate}/>
             </Col>
             <Col fluid={"true"}>
