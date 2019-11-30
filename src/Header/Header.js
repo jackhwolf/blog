@@ -43,6 +43,7 @@ class Header extends React.Component {
 
   submit() {
     if (this.searchEntry.current.value != "") {
+      console.log(this.searchEntry.current.value)
       this.props.history.push({
         pathname: '/search/' + this.searchEntry.current.value
       })
@@ -59,9 +60,9 @@ class Header extends React.Component {
           <Nav className="mr-auto">
             {this.getLinks()}
           </Nav>
-          <Form inline id='searchForm' className='searchForm' ref={form => this.searchForm = form} onSubmit={this.submit}>
+          <Form inline id='searchForm' className='searchForm' ref={form => this.searchForm = form}>
               <FormControl type="text" placeholder="Enter search" className="mr-sm-2" ref={this.searchEntry}/>
-              <Button variant="info" type="submit">go!!!</Button>
+              <Button variant="info" onClick={this.submit}>go!!!</Button>
           </Form>
         </Navbar>
       </div>
