@@ -23,7 +23,7 @@ class Landing extends React.Component {
   }
 
   changeSearch(search) { 
-    console.log("change search")
+    console.log("change search to: " + search)
     this.setState({search: search}) 
   }
 
