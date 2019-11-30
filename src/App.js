@@ -30,19 +30,23 @@ class App extends React.Component {
     return <Post postid={postid} markdown={resp}/>
   }
 
+  renderLanding(props) {
+    return <Landing search={props.match.params.search} />
+  }
+
   render() {
     return (
       <Switch>
 
         <Route exact path={'/'}
-          render = {() => <Landing/>}
+          render={(props) => this.renderLanding(props)}
         />
 
         <Route exact path={'/about'} render={(props) => this.renderPost(props)}/>
 
         <Route path={'/post/:id'} render={(props) => this.renderPost(props)}/>
 
-        <Route path={'/search/:search'} render={() => <Landing/>}/>
+        <Route path={'/search/:search'} render={(props) => this.renderLanding(props)}/>
 
       </Switch>
     );
