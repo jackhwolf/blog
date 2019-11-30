@@ -42,6 +42,7 @@ class Header extends React.Component {
   }
 
   submit() {
+    console.log("current search: " + this.searchEntry.current.value)
     if (this.searchEntry.current.value != "") {
       this.props.history.push({
         pathname: '/search/' + this.searchEntry.current.value
