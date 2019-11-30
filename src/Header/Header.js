@@ -42,10 +42,12 @@ class Header extends React.Component {
   }
 
   submit() {
-    if (this.searchEntry.current.value != "") {
+    var cv = this.searchEntry.current.value
+    console.log("Current search: " + cv)
+    if (cv != "") {
       console.log(this.searchEntry.current.value)
       this.props.history.push({
-        pathname: '/search/' + this.searchEntry.current.value
+        pathname: '/search/' + cv
       })
       ReactDOM.findDOMNode(this.searchForm).reset();
     }
