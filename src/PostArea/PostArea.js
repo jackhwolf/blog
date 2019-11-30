@@ -8,23 +8,26 @@ class PostArea extends React.Component {
     super(props)
     this.endpoint = 'https://cors-anywhere.herokuapp.com/http://13.56.250.168/v1/blogpost'
     this.state = {
-      postitems: []
+      postitems: [],
+      search: this.props.search
     }
   }
 
   // fetch post info
   async componentDidMount() {
-    var posts = []
     const resp = await fetch(this.endpoint)
       .then(x => x.json())
-    console.log(resp)
-    posts = resp['data']
+    var posts = resp['data']
     var postitems = []
     for (const x of posts) {
-      postitems.push(
-        <PostItem key={x['postid']} postID={x['postid']} 
-                  postTitle={x['post']['title']} postDesc={x['post']['desc']}/>
-      )
+      // check search
+      if (this.state.search === undefined || x['post']['tags'].indexOf(this.state.search) >= 0) {
+        postitems.push(
+          <PostItem key={x['postid']} postID={x['postid']} 
+                    postTitle={x['post']['title']} postDesc={x['post']['desc']}
+                    postTags={x['post']['tags']}/>
+        )
+      }
     }
     this.setState({postitems: postitems})
   }

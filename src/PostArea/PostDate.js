@@ -2,12 +2,13 @@ import React from 'react';
 import Card from 'react-bootstrap/Card';
 import './PostArea.scss'
 
-class PostTag extends React.Component {
+class PostDate extends React.Component {
 
   constructor(props) {
     super(props)
     this.cardstyle = {
-      backgroundColor: "#C8DAFE"
+      backgroundColor: "#C8DAFE",
+      width: '8rem'
     }
   }
 
@@ -25,4 +26,4 @@ class PostTag extends React.Component {
   }
 }
 
-export default PostTag;
+export default PostDate;

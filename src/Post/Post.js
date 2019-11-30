@@ -21,6 +21,7 @@ class Post extends React.Component {
 
   constructor(props) {
     super(props)
+    document.body.style.background = '#7C94B5';
   }
 
   async componentDidMount() {

@@ -5,25 +5,74 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
-import PostTag from './PostTag.js'
+import PostDate from './PostDate.js'
 import './PostArea.scss'
 import '../PostSidebarText.scss'
+
+const days = [
+  'Mon', 'Tues', 'Wed', 'Thurs', 'Fri', 'Sat', 'Sun'
+]
+const mos = [
+  'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+  'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
+]
+
+class PostTag extends React.Component {
+
+  constructor(props) {
+    super(props)
+    this.state = {
+      tag: this.props.tag
+    }
+    this.searchTag = this.searchTag.bind(this)
+  }
+
+  searchTag() {
+    this.props.history.push({
+      pathname: '/search/' + this.state.tag
+    })
+  }
+
+  render() {
+    return (
+      <Card.Link className="cardtag"
+                 href=""
+                 onClick={() => this.searchTag()}>{this.state.tag}</Card.Link>
+    )
+  }
+}
 
 class PostItem extends React.Component {
 
   constructor(props) {
     super(props);
     this.cardstyle = {
-      backgroundColor: "#C8DAFE"
+      backgroundColor: "#C8DAFE",
+      width: '50rem'
     }
     this.state = {
       id: this.props.postID,
-      postdate: ["Oct 30", "2019"], // this.props.postDate,
-      tags: ["A", "B"], // this.props.postTag
+      postdate: [], 
+      tags: this.props.postTags.split(', '), 
       title: this.props.postTitle,
       desc: this.props.postDesc,
       btnKey: 'read me!'
     }
+    // this.makeDate()
+  }
+
+  componentDidMount(date) {
+    var epoch = this.props.postID.split("===")
+    epoch = epoch[epoch.length-1]
+    var date = new Date(0)
+    date.setUTCSeconds(epoch)
+    var day = days[date.getDay()]
+    var month = mos[date.getMonth()]
+    var A = day + ", " + month + " " + date.getDate()
+    var B = date.getHours() + ":" + date.getMinutes()
+    this.setState({
+      postdate: [A, B]
+    })
   }
 
   viewpost(postID) {
@@ -32,13 +81,21 @@ class PostItem extends React.Component {
     })
   }
 
+  renderTags() {
+    var t = []
+    for (var i=0; i<this.state.tags.length; i++) {
+      t.push(<PostTag key={i} tag={this.state.tags[i]} history={this.props.history}/>)
+    }
+    return t
+  }
+
   render() {
     return (
       <>
         <Container fluid={"true"} className="postitem">
           <Row className="justify-content-md-center" fluid={"true"}>
             <Col xs={3} md={2} fluid={"true"}>
-              <PostTag postdate={this.state.postdate}/>
+              <PostDate postdate={this.state.postdate}/>
             </Col>
             <Col fluid={"true"}>
               <Card style={this.cardstyle} border="info" className="postitemcard" fluid={"true"}>
@@ -47,7 +104,7 @@ class PostItem extends React.Component {
                   <Card.Text className="cardtext">
                     {this.state.desc}
                   </Card.Text>
-                  <Card.Text>{this.state.tags[0]}, {this.state.tags[1]}</Card.Text>
+                  <Card.Text>{this.renderTags()}</Card.Text>
                   <Button onClick={() => this.viewpost(this.state.id)} variant="primary"
                                                className="readmore">{this.state.btnKey}</Button>
                 </Card.Body>
