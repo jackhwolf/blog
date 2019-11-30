@@ -14,7 +14,8 @@ class Sidebar extends React.Component {
     this.sidebaritems = [];
     this.sidebarcardstyle = {
       backgroundColor: "#999999",
-      width: '20rem'
+      width: '18rem',
+      padding: '5px'
     }
     this.titlecardstyle = {
       backgroundColor: "#F0E3EF"
@@ -32,7 +33,6 @@ class Sidebar extends React.Component {
   render() {
     return (
       <>
-      <div className="sidebar">
       <Card className="outercard" style={this.sidebarcardstyle}>
           <Container fluid={"true"}>
             <Row className="justify-content-md-center" fluid={"true"}>
@@ -49,7 +49,6 @@ class Sidebar extends React.Component {
             </Row>
           </Container>
         </Card>
-      </div>
       </>
     )
   }
