@@ -13,8 +13,8 @@ class Header extends React.Component {
   constructor(props) {
     super(props)
     this.links = [
-      ["/blog/post/about", "About me"],
-      ["/blog/", "Home"]
+      ["/post/about", "About me"],
+      ["/", "Home"]
     ]
     this.goToAbout = this.goToAbout.bind(this)
     this.submit = this.submit.bind(this)
