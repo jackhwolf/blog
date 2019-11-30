@@ -14,7 +14,8 @@ class Sidebar extends React.Component {
     this.sidebaritems = [];
     this.sidebarcardstyle = {
       backgroundColor: "#999999",
-      padding: "4px"
+      padding: "4px",
+      width: '10rem'
     }
     this.titlecardstyle = {
       backgroundColor: "#F0E3EF"
