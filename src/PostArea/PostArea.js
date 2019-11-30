@@ -14,6 +14,7 @@ class PostArea extends React.Component {
       search: this.props.search
     }
     this.changeSearch = this.changeSearch.bind(this)
+    console.log(this.state.search)
   }
 
   // fetch post info
