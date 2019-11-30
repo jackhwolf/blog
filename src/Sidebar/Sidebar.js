@@ -30,9 +30,6 @@ class Sidebar extends React.Component {
     for (var i=0; i<3; i++) {
       s.push(<SidebarItem key={i}/>)
     }
-    this.setState({
-      sidebaritems: s
-    })
     return s
   }
 
