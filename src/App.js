@@ -34,15 +34,15 @@ class App extends React.Component {
     return (
       <Switch>
 
-        <Route exact path={process.env.PUBLIC_URL + '/'}
+        <Route exact path={'/'}
           render = {() => <Landing/>}
         />
 
-        <Route exact path={process.env.PUBLIC_URL + '/about'} render={(props) => this.renderPost(props)}/>
+        <Route exact path={'/about'} render={(props) => this.renderPost(props)}/>
 
-        <Route path={process.env.PUBLIC_URL + '/post/:id'} render={(props) => this.renderPost(props)}/>
+        <Route path={'/post/:id'} render={(props) => this.renderPost(props)}/>
 
-        <Route path={process.env.PUBLIC_URL + '/search/:search'} render={() => <Landing/>}/>
+        <Route path={'/search/:search'} render={() => <Landing/>}/>
 
       </Switch>
     );
