@@ -33,7 +33,9 @@ class Header extends React.Component {
     var links = [];
     var k = 0
     this.links.forEach(elem => {
-      links.push(<Nav.Link key={k} onSelect={this.goToAbout}>{elem[1]}</Nav.Link>);
+      links.push(
+        <Button key={k} onClick={this.goToAbout}>{elem[1]}</Button>
+      );
       k += 1
     });
     return links;
