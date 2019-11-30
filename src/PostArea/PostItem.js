@@ -48,7 +48,7 @@ class PostItem extends React.Component {
     super(props);
     this.cardstyle = {
       backgroundColor: "#C8DAFE",
-      width: '1.5rem'
+      width: '50rem'
     }
     this.state = {
       id: this.props.postID,
