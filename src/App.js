@@ -42,7 +42,7 @@ class App extends React.Component {
           render={(props) => this.renderLanding(props)}
         />
 
-        <Route exact path={'/about'} render={(props) => this.renderPost(props)}/>
+        <Route path={'/about'} render={(props) => this.renderPost(props)}/>
 
         <Route path={'/post/:id'} render={(props) => this.renderPost(props)}/>
 
