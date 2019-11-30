@@ -56,7 +56,7 @@ class PostItem extends React.Component {
       tags: this.props.postTags.split(', '), 
       title: this.props.postTitle,
       desc: this.props.postDesc,
-      btnKey: 'i changed!'
+      btnKey: 'i changed again!'
     }
     // this.makeDate()
   }
