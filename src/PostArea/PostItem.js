@@ -56,7 +56,7 @@ class PostItem extends React.Component {
       tags: this.props.postTags.split(', '), 
       title: this.props.postTitle,
       desc: this.props.postDesc,
-      btnKey: 'hey2!'
+      btnKey: 'i changed again!'
     }
     // this.makeDate()
   }
@@ -93,8 +93,8 @@ class PostItem extends React.Component {
     return (
       <>
         <Container fluid={"true"} className="postitem">
-          <Row>
-            <Col>
+          <Row className="justify-content-md-center">
+            <Col fluid={"true"}>
               <PostDate postdate={this.state.postdate}/>
             </Col>
             <Col fluid={"true"}>

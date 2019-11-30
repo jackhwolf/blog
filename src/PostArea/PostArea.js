@@ -1,5 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+import Container from 'react-bootstrap/Container';
 import PostItem from './PostItem.js';
 
 class PostArea extends React.Component {
@@ -34,9 +35,9 @@ class PostArea extends React.Component {
 
   render() {
     return (
-      <div className="postarea">
+      <Container fluid={"true"} className="postarea">
         {this.state.postitems}
-      </div>
+      </Container>
     )
   }
 
