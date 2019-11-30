@@ -17,7 +17,7 @@ class PostDate extends React.Component {
       <>
       <Card border="justify-content-md-center primary" className="posttag" fluid={"true"} style={this.cardstyle}>
         <Card.Body className="cardbody">
-        <Card.Title className="justify-content-md-center postdate">{this.props.postdate[0]}</Card.Title>
+        <Card.Title className="justify-content-md-center postdate">{this.props.postdate}</Card.Title>
         </Card.Body>
       </Card>
       </>
