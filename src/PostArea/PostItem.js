@@ -36,8 +36,7 @@ class PostTag extends React.Component {
   render() {
     return (
       <Card.Link className="cardtag"
-                 href=""
-                 onClick={() => this.searchTag()}>{this.state.tag}</Card.Link>
+        onClick={() => this.searchTag()}>{this.state.tag}</Card.Link>
     )
   }
 }
