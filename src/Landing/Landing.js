@@ -28,6 +28,7 @@ class Landing extends React.Component {
   }
 
   render () {
+    console.log("render " + this.state.search)
     return (
       <div className="main">
         <Container className="maincontainer" fluid={"true"}>
