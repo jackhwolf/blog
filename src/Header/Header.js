@@ -42,7 +42,8 @@ class Header extends React.Component {
   }
 
   submit() {
-    console.log("current search: " + this.searchEntry.current.value)
+    var csv = this.searchEntry.current.value
+    console.log("Current search value: " + csv)
     if (this.searchEntry.current.value != "") {
       // this.props.history.push({
       //   pathname: '/search/' + this.searchEntry.current.value
