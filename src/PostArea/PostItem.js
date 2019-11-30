@@ -100,9 +100,8 @@ class PostItem extends React.Component {
               <Card style={this.cardstyle} border="info" className="postitemcard" fluid={"true"}>
                 <Card.Header className="featuredheader">{this.state.title}</Card.Header>
                 <Card.Body className="cardbody">
-                  <Card.Text className="cardtext">
-                    {this.state.desc}
-                  </Card.Text>
+                  <Card.Text className="cardtext">{this.state.postdate}</Card.Text>
+                  <Card.Text className="cardtext">{this.state.desc}</Card.Text>
                   <Card.Text>{this.renderTags()}</Card.Text>
                   <Button onClick={() => this.viewpost(this.state.id)} variant="primary"
                           className="readmore">{this.state.btnKey}</Button>
