@@ -93,7 +93,7 @@ class PostItem extends React.Component {
     return (
       <>
         <Container fluid={"true"} className="postitem">
-          <Row className="justify-content-md-center">
+          <Row className="justify-content-md-center" style={{border: '5px red'}}>
             <Col fluid={"true"}>
               <PostDate postdate={this.state.postdate}/>
             </Col>
