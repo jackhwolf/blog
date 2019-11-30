@@ -62,7 +62,7 @@ class Header extends React.Component {
           </Nav>
           <Form inline id='searchForm' className='searchForm' ref={this.searchForm}>
               <FormControl type="text" placeholder="Enter search" className="mr-sm-2" ref={this.searchEntry}/>
-              <Button variant="info" type="submit" onClick={this.submit}>search!!</Button>
+              <Nav.Link variant="info" onClick={this.submit}>search!!</Nav.Link>
           </Form>
         </Navbar>
       </div>
