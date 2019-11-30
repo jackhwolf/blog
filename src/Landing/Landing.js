@@ -22,7 +22,7 @@ class Landing extends React.Component {
     return (
       <div className="main">
         <Container className="maincontainer" fluid={"true"}>
-          <Row className="mainrow" fluid={"true"}>
+          <Row className="farleft mainrow" fluid={"true"}>
             <Col><Header/></Col>
           </Row>
           <Row className="justify-content-md-center mainrow">
