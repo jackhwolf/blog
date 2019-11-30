@@ -14,15 +14,15 @@ class Header extends React.Component {
     super(props)
     this.links = [
       ["/post/about", "About me"],
-      ["/search/post", "Home"]
+      ["/", "Home"]
     ]
-    this.goToAbout = this.goToAbout.bind(this)
+    this.goTo = this.goTo.bind(this)
     this.submit = this.submit.bind(this)
     this.searchForm = React.createRef()
     this.searchEntry = React.createRef()
   }
 
-  goToAbout(path) {
+  goTo(path) {
     this.props.history.push({
       pathname: path
     })
@@ -33,7 +33,7 @@ class Header extends React.Component {
     var k = 0
     this.links.forEach(elem => {
       links.push(
-        <Button key={k} onClick={() => this.goToAbout(elem[0])} style={{paddingRight: '5px'}}>{elem[1]}</Button>
+        <Button key={k} onClick={() => this.goTo(elem[0])} style={{paddingRight: '5px'}}>{elem[1]}</Button>
       );
       k += 1
     });

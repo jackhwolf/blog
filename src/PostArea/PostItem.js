@@ -28,9 +28,7 @@ class PostTag extends React.Component {
   }
 
   searchTag() {
-    this.props.history.push({
-      pathname: '/search/' + this.state.tag
-    })
+    this.props.callback(this.state.tag)
   }
 
   render() {
@@ -82,7 +80,7 @@ class PostItem extends React.Component {
   renderTags() {
     var t = []
     for (var i=0; i<this.state.tags.length; i++) {
-      t.push(<PostTag key={i} tag={this.state.tags[i]} history={this.props.history}/>)
+      t.push(<PostTag key={i} tag={this.state.tags[i]} history={this.props.history} callback={this.props.changeSearch}/>)
     }
     return t
   }

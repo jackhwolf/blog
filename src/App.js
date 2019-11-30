@@ -4,30 +4,31 @@ import Landing from './Landing/Landing.js'
 import Post from './Post/Post.js'
 import './App.scss';
 import './Main.scss';
-import marked from 'marked'
-
+import marked from 'marked';
 
 class App extends React.Component {
 
   constructor(props) {
     super(props)
-    this.state = {
-      markdown: ""
-    }
+    this.renderPostHandler = this.renderPostHandler.bind(this)
   }
 
-  renderPost(props) {
-    var postid = props.match.params.id
+  async renderPostHandler(postid) {
     var fname = './posts/' + postid + '/post.md'
     const file = require("" + fname)
-    const resp = fetch(file)
+    const resp = await fetch(file)
       .then(response => {
         return response.text()
       })
       .then(text => {
-          return marked(text)
+        return marked(text)
       })
-    return <Post postid={postid} markdown={resp}/>
+    return resp
+    // return <Post postid={this.state.postid} markdown={resp} />
+  }
+
+  renderPost(props) {
+    return <Post postid={props.match.params.id} handler={this.renderPostHandler}/>
   }
 
   renderLanding(props) {
@@ -42,9 +43,9 @@ class App extends React.Component {
           render={(props) => this.renderLanding(props)}
         />
 
-        <Route path={'/post/:id'} render={(props) => this.renderPost(props)}/>
-
         <Route path={'/search/:q'} render={(props) => this.renderLanding(props)}/>
+
+        <Route path={'/post/:id'} render={(props) => this.renderPost(props)}/>
 
       </Switch>
     );

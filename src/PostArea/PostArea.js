@@ -10,12 +10,35 @@ class PostArea extends React.Component {
     this.endpoint = 'https://cors-anywhere.herokuapp.com/http://13.56.250.168/v1/blogpost'
     this.state = {
       postitems: [],
+      display: [],
       search: this.props.search
     }
+    this.changeSearch = this.changeSearch.bind(this)
+  }
+
+  changeSearch(msearch) {
+    this.filter(msearch)
+  }
+
+  filter(search) {
+    var display = []
+    for (const x of this.state.posts) {
+      if (search === undefined || x['post']['tags'].indexOf(search) >= 0) {
+        display.push(
+          <PostItem key={x['postid']} postID={x['postid']}
+            postTitle={x['post']['title']} postDesc={x['post']['desc']}
+            postTags={x['post']['tags']} changeSearch={this.changeSearch} />
+        )
+      }
+    }
+    console.log(display.length)
+    this.setState({display: display})
   }
 
   // fetch post info
   async componentDidMount() {
+    console.log("did mount:", this.state.search)
+    console.log(this.state.search)
     const resp = await fetch(this.endpoint)
       .then(x => x.json())
     var posts = resp['data']
@@ -26,17 +49,17 @@ class PostArea extends React.Component {
         postitems.push(
           <PostItem key={x['postid']} postID={x['postid']} 
                     postTitle={x['post']['title']} postDesc={x['post']['desc']}
-                    postTags={x['post']['tags']}/>
+                    postTags={x['post']['tags']} changeSearch={this.changeSearch}/>
         )
       }
     }
-    this.setState({postitems: postitems})
+    this.setState({postitems: postitems, display: postitems, posts: resp['data']})
   }
 
   render() {
     return (
       <Container fluid={"true"} className="postarea">
-        {this.state.postitems}
+        {this.state.display}
       </Container>
     )
   }

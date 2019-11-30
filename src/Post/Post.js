@@ -7,26 +7,37 @@ import Image from 'react-bootstrap/Image';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { withRouter} from 'react-router-dom';
-import marked from 'marked';
 import hljs from 'highlight.js'
 import './Post.scss'
+import marked from 'marked';
 
 marked.setOptions({
   highlight: (code) => hljs.highlightAuto(code).value
 });
 
-
-
 class Post extends React.Component {
 
   constructor(props) {
     super(props)
+    this.state = {
+      postid: this.props.postid,
+      markdown: null
+    }
     document.body.style.background = '#7C94B5';
   }
 
+  async componentWillReceiveProps(props) {
+    this.setState({postid: props.postid})
+    await this.updateMD(props.postid)
+  }
+
   async componentDidMount() {
-    const md = await this.props.markdown
-    this.setState({markdown: md})
+    await this.updateMD(this.state.postid)
+  }
+
+  async updateMD(postid) {
+    var resp = await this.props.handler(postid)
+    this.setState({markdown: resp})
   }
 
   render () {
