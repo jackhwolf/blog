@@ -20,6 +20,9 @@ class Sidebar extends React.Component {
     this.titlecardstyle = {
       backgroundColor: "#F0E3EF"
     }
+    this.state = {
+      sidebaritems: []
+    }
   }
 
   fillSidebar() {
@@ -27,8 +30,10 @@ class Sidebar extends React.Component {
     for (var i=0; i<3; i++) {
       s.push(<SidebarItem key={i}/>)
     }
-    this.sidebaritems = s
-    return this.sidebaritems
+    this.setState({
+      sidebaritems: s
+    })
+    return s
   }
 
 
