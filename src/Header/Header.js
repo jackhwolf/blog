@@ -49,7 +49,7 @@ class Header extends React.Component {
         pathname: '/search/' + csv
       })
       this.props.handler(csv)
-      ReactDOM.findDOMNode(this.searchForm).reset();
+      // ReactDOM.findDOMNode(this.searchForm).reset();
     }
   }
 
