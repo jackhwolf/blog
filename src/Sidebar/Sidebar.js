@@ -39,7 +39,7 @@ class Sidebar extends React.Component {
             <Row className="justify-content-md-center" fluid={"true"}>
               <Col className="justify-content-md-center">
                 <Card border="primary" className="sidebartitle" fluid={"true"} style={this.titlecardstyle}>
-                    <Card.Text align="center" className="sidebartitletext">Featured Content</Card.Text>
+                    <Card.Text align="center" className="sidebartitletext">Featured condean</Card.Text>
                 </Card>
               </Col>
             </Row>
