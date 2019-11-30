@@ -56,9 +56,8 @@ class PostItem extends React.Component {
       tags: this.props.postTags.split(', '), 
       title: this.props.postTitle,
       desc: this.props.postDesc,
-      btnKey: 'hey4!'
+      btnKey: 'hey5!'
     }
-    // this.makeDate()
   }
 
   componentDidMount(date) {
@@ -71,7 +70,7 @@ class PostItem extends React.Component {
     var A = day + ", " + month + " " + date.getDate()
     var B = date.getHours() + ":" + date.getMinutes()
     this.setState({
-      postdate: [A, B]
+      postdate: A + " " + B
     })
   }
 
@@ -106,7 +105,7 @@ class PostItem extends React.Component {
                   </Card.Text>
                   <Card.Text>{this.renderTags()}</Card.Text>
                   <Button onClick={() => this.viewpost(this.state.id)} variant="primary"
-                                               className="readmore">{this.state.btnKey}</Button>
+                          className="readmore">{this.state.btnKey}</Button>
                 </Card.Body>
               </Card>
             </Col>
