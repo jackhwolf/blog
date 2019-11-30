@@ -13,8 +13,8 @@ class Header extends React.Component {
   constructor(props) {
     super(props)
     this.links = [
-      ["/post/about", "About me"],
-      ["/", "Home"]
+      ["/blog/post/about", "/post/about", "About me"],
+      ["/blog/", "/", "Home"]
     ]
     this.goTo = this.goTo.bind(this)
     this.submit = this.submit.bind(this)
@@ -34,7 +34,7 @@ class Header extends React.Component {
     var k = 0
     this.links.forEach(elem => {
       links.push(
-        <Nav.Link key={k} href="/blog/" onClick={() => this.goTo(elem[0])} style={{paddingRight: '5px'}}>{elem[1]}</Nav.Link>
+        <Nav.Link key={k} href={elem[0]} onClick={() => this.goTo(elem[1])} style={{paddingRight: '5px'}}>{elem[2]}</Nav.Link>
       );
       k += 1
     });
