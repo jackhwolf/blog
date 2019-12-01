@@ -36,7 +36,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <HashRouter basename="/">
+      <HashRouter basename="/blog">
         <Switch>
 
           <Route exact path={'/'}
