@@ -10,6 +10,8 @@ At UW, I've been a member of the [Wisconsin Institute for Discovery](https://wid
 
 Outside of coding, I love dogs and the ocean, and go home to the SF Bay Area whenever I can.
 
+![alt text](https://github.com/jackhwolf/blog/raw/master/src/posts/57e8adcaf34b4852812fd292edec5de9===1575170880/dog.png "Logo Title Text 1")
+
 
 Hope you enjoy, 
 
