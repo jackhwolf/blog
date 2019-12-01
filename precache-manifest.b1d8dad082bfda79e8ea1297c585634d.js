@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "fd354b7431badc39d4f6d9a4ef9afa4f",
+    "revision": "53423cca1203a5294816db346721793c",
     "url": "/blog/index.html"
   },
   {
-    "revision": "e8f5288e9f06b6856015",
+    "revision": "b58c52217c9978420e33",
     "url": "/blog/static/css/2.b0bb7f2c.chunk.css"
   },
   {
-    "revision": "3f3790435ec022298b23",
-    "url": "/blog/static/css/main.fe17f485.chunk.css"
+    "revision": "99d3415388e2b9a81de4",
+    "url": "/blog/static/css/main.145b6ff0.chunk.css"
   },
   {
-    "revision": "e8f5288e9f06b6856015",
-    "url": "/blog/static/js/2.07035057.chunk.js"
+    "revision": "b58c52217c9978420e33",
+    "url": "/blog/static/js/2.d70095e0.chunk.js"
   },
   {
-    "revision": "3f3790435ec022298b23",
-    "url": "/blog/static/js/main.34c4f0b9.chunk.js"
+    "revision": "99d3415388e2b9a81de4",
+    "url": "/blog/static/js/main.45a13699.chunk.js"
   },
   {
     "revision": "3ab9dfc9000e704fe6b2",
@@ -28,6 +28,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/blog/static/media/awslogo.a9b726c4.png"
   },
   {
+    "revision": "bd0b2dbd839f638fefbcbf591d8c9ff3",
+    "url": "/blog/static/media/bucky.bd0b2dbd.png"
+  },
+  {
     "revision": "ea92008be92e35cc7b6d33e12110dcee",
     "url": "/blog/static/media/flasklogo.ea92008b.png"
   },
@@ -36,16 +40,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/blog/static/media/logo.25bf045c.svg"
   },
   {
-    "revision": "c76edd1578978f2ca146da3b97092b8a",
-    "url": "/blog/static/media/post.c76edd15.md"
-  },
-  {
-    "revision": "f62e8cc992cf0ae7b69c2227a8f508ad",
-    "url": "/blog/static/media/puppy-dog-Copy1.f62e8cc9.jpg"
-  },
-  {
-    "revision": "f62e8cc992cf0ae7b69c2227a8f508ad",
-    "url": "/blog/static/media/puppy-dog.f62e8cc9.jpg"
+    "revision": "69aba11300c66c986904125cb012f25e",
+    "url": "/blog/static/media/post.69aba113.md"
   },
   {
     "revision": "82a318ccea22a8af9fc4590f41df9238",

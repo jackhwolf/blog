@@ -1,31 +1,30 @@
 {
   "files": {
-    "main.css": "/blog/static/css/main.fe17f485.chunk.css",
-    "main.js": "/blog/static/js/main.34c4f0b9.chunk.js",
-    "main.js.map": "/blog/static/js/main.34c4f0b9.chunk.js.map",
+    "main.css": "/blog/static/css/main.145b6ff0.chunk.css",
+    "main.js": "/blog/static/js/main.45a13699.chunk.js",
+    "main.js.map": "/blog/static/js/main.45a13699.chunk.js.map",
     "runtime-main.js": "/blog/static/js/runtime-main.6448740b.js",
     "runtime-main.js.map": "/blog/static/js/runtime-main.6448740b.js.map",
     "static/css/2.b0bb7f2c.chunk.css": "/blog/static/css/2.b0bb7f2c.chunk.css",
-    "static/js/2.07035057.chunk.js": "/blog/static/js/2.07035057.chunk.js",
-    "static/js/2.07035057.chunk.js.map": "/blog/static/js/2.07035057.chunk.js.map",
+    "static/js/2.d70095e0.chunk.js": "/blog/static/js/2.d70095e0.chunk.js",
+    "static/js/2.d70095e0.chunk.js.map": "/blog/static/js/2.d70095e0.chunk.js.map",
     "index.html": "/blog/index.html",
-    "precache-manifest.2a432141518dbdc976ca430bd81df780.js": "/blog/precache-manifest.2a432141518dbdc976ca430bd81df780.js",
+    "precache-manifest.b1d8dad082bfda79e8ea1297c585634d.js": "/blog/precache-manifest.b1d8dad082bfda79e8ea1297c585634d.js",
     "service-worker.js": "/blog/service-worker.js",
     "static/css/2.b0bb7f2c.chunk.css.map": "/blog/static/css/2.b0bb7f2c.chunk.css.map",
-    "static/css/main.fe17f485.chunk.css.map": "/blog/static/css/main.fe17f485.chunk.css.map",
+    "static/css/main.145b6ff0.chunk.css.map": "/blog/static/css/main.145b6ff0.chunk.css.map",
     "static/media/awslogo.png": "/blog/static/media/awslogo.a9b726c4.png",
+    "static/media/bucky.png": "/blog/static/media/bucky.bd0b2dbd.png",
     "static/media/flasklogo.png": "/blog/static/media/flasklogo.ea92008b.png",
     "static/media/logo.svg": "/blog/static/media/logo.25bf045c.svg",
-    "static/media/post.md": "/blog/static/media/post.c76edd15.md",
-    "static/media/puppy-dog-Copy1.jpg": "/blog/static/media/puppy-dog-Copy1.f62e8cc9.jpg",
-    "static/media/puppy-dog.jpg": "/blog/static/media/puppy-dog.f62e8cc9.jpg",
+    "static/media/post.md": "/blog/static/media/post.69aba113.md",
     "static/media/reactjslogo.png": "/blog/static/media/reactjslogo.82a318cc.png"
   },
   "entrypoints": [
     "static/js/runtime-main.6448740b.js",
     "static/css/2.b0bb7f2c.chunk.css",
-    "static/js/2.07035057.chunk.js",
-    "static/css/main.fe17f485.chunk.css",
-    "static/js/main.34c4f0b9.chunk.js"
+    "static/js/2.d70095e0.chunk.js",
+    "static/css/main.145b6ff0.chunk.css",
+    "static/js/main.45a13699.chunk.js"
   ]
 }
