@@ -63,7 +63,7 @@ class Header extends React.Component {
             {this.getLinks()}
           </Nav>
           <Form inline id='searchForm' className='searchForm' ref={this.searchForm}>
-              <FormControl type="text" placeholder="Enter search" className="mr-sm-2" ref={this.searchEntry}/>
+              <FormControl type="text" placeholder="I DON'T CURRENTLY WORK" className="mr-sm-2" ref={this.searchEntry}/>
               <Button variant="info" onClick={this.submit}>search!</Button>
           </Form>
         </Navbar>
