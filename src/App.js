@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashRouter, Route, Switch } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import Landing from './Landing/Landing.js'  
 import Post from './Post/Post.js'
 import './App.scss';
@@ -36,7 +36,6 @@ class App extends React.Component {
 
   render() {
     return (
-      <HashRouter basename="/blog">
         <Switch>
 
           <Route exact path={'/'}
@@ -48,7 +47,6 @@ class App extends React.Component {
           <Route path={'/post/:id'} render={(props) => this.renderPost(props)}/>
 
         </Switch>
-      </HashRouter>
     );
   }
 }
