@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { HashRouter, Route, Switch } from 'react-router-dom';
 import Landing from './Landing/Landing.js'  
 import Post from './Post/Post.js'
 import './App.scss';
@@ -36,17 +36,19 @@ class App extends React.Component {
 
   render() {
     return (
-      <Switch>
+      <HashRouter basename="/">
+        <Switch>
 
-        <Route exact path={'/'}
-          render={(props) => this.renderLanding(props)}
-        />
+          <Route exact path={'/'}
+            render={(props) => this.renderLanding(props)}
+          />
 
-        <Route path={'/search/:q'} render={(props) => this.renderLanding(props)}/>
+          <Route path={'/search/:q'} render={(props) => this.renderLanding(props)}/>
 
-        <Route path={'/post/:id'} render={(props) => this.renderPost(props)}/>
+          <Route path={'/post/:id'} render={(props) => this.renderPost(props)}/>
 
-      </Switch>
+        </Switch>
+      </HashRouter>
     );
   }
 }
