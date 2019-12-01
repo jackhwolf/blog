@@ -13,7 +13,7 @@ class Header extends React.Component {
   constructor(props) {
     super(props)
     this.links = [
-      [null, "/post/about", "About"],
+      [null, "/post/57e8adcaf34b4852812fd292edec5de9===1575170880", "About"],
       ["/blog/", "/", "Home"]
     ]
     this.goTo = this.goTo.bind(this)
