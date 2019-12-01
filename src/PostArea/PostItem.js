@@ -70,7 +70,11 @@ class PostItem extends React.Component {
     var day = days[date.getDay()]
     var month = mos[date.getMonth()]
     var A = day + ", " + month + " " + date.getDate()
-    var B = date.getHours() + ":" + date.getMinutes()
+    var m = date.getMinutes().toString()
+    if (m.length == 1) {
+      m = '0' + m
+    }
+    var B = date.getHours() + ":" + m
     this.setState({
       postdate: A + " " + B
     })
