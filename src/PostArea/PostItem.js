@@ -104,7 +104,7 @@ class PostItem extends React.Component {
                 <PostDate postdate={this.state.postdate}/>
               </Col>
             */}
-            <Col fluid={"true"}>
+            <Col fluid={"true"} className="justify-content-md-center">
               <Card style={this.cardstyle} border="info" className="postitemcard" fluid={"true"}>
                 <Card.Header>
                   <Card.Text className="featuredheader">{this.state.title}</Card.Text>
