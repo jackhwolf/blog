@@ -9,8 +9,8 @@ import Col from 'react-bootstrap/Col';
 import { withRouter} from 'react-router-dom';
 import hljs from 'highlight.js'
 import './Post.scss'
-// import './atom-one-dark.css'
 import marked from 'marked';
+// import './atom-one-dark.css'
 
 
 marked.setOptions({
