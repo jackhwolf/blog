@@ -9,11 +9,14 @@ import Col from 'react-bootstrap/Col';
 import { withRouter} from 'react-router-dom';
 import hljs from 'highlight.js'
 import './Post.scss'
+// import './atom-one-dark.css'
 import marked from 'marked';
+
 
 marked.setOptions({
   highlight: (code) => hljs.highlightAuto(code).value
 });
+
 
 class Post extends React.Component {
 
@@ -21,9 +24,9 @@ class Post extends React.Component {
     super(props)
     this.state = {
       postid: this.props.postid,
-      markdown: null
+      markdown: "# Post loading..."
     }
-    document.body.style.background = '#7C94B5';
+    document.body.style.background = 'rgb(78, 49, 87)';
   }
 
   async componentWillReceiveProps(props) {
@@ -49,7 +52,7 @@ class Post extends React.Component {
                 <Col>
                   <Row className="justify-content-md-center">
                     <section>
-                      <article dangerouslySetInnerHTML={{__html: this.state === null ? "" : this.state.markdown}}></article>
+                      <article dangerouslySetInnerHTML={{__html: this.state.markdown}}></article>
                     </section>
                   </Row>
                 </Col>

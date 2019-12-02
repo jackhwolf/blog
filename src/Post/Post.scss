@@ -1,11 +1,13 @@
+$codebg: #8f8c8c;
+
 .postcont {
-  background-color: #7C94B5;
+  background-color: rgb(78, 49, 87);
   padding: 0px;
   margin: 0px;
 }
 
 body {
-  background-color: #7C94B5;
+  background-color: rgb(78, 49, 87);
 }
 
 section {
@@ -13,14 +15,14 @@ section {
   background-color: lightsteelblue;
 }
 
+code {
+  // background-color: #808080;
+}
+
 pre {
   padding-left: 10px;
   border-left: 2px solid black;
-  background: lightgrey;
-}
-
-code {
-  // font-size: 200%;
+  background-color: $codebg;
 }
 
 img {
