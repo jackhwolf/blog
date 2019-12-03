@@ -1,30 +1,35 @@
 {
   "files": {
-    "main.css": "/blog/static/css/main.fc269bcc.chunk.css",
-    "main.js": "/blog/static/js/main.a33e8233.chunk.js",
-    "main.js.map": "/blog/static/js/main.a33e8233.chunk.js.map",
+    "main.css": "/blog/static/css/main.5529f2b0.chunk.css",
+    "main.js": "/blog/static/js/main.ba80e2db.chunk.js",
+    "main.js.map": "/blog/static/js/main.ba80e2db.chunk.js.map",
     "runtime-main.js": "/blog/static/js/runtime-main.6448740b.js",
     "runtime-main.js.map": "/blog/static/js/runtime-main.6448740b.js.map",
     "static/css/2.b0bb7f2c.chunk.css": "/blog/static/css/2.b0bb7f2c.chunk.css",
-    "static/js/2.0e6f8da0.chunk.js": "/blog/static/js/2.0e6f8da0.chunk.js",
-    "static/js/2.0e6f8da0.chunk.js.map": "/blog/static/js/2.0e6f8da0.chunk.js.map",
+    "static/js/2.43d332c8.chunk.js": "/blog/static/js/2.43d332c8.chunk.js",
+    "static/js/2.43d332c8.chunk.js.map": "/blog/static/js/2.43d332c8.chunk.js.map",
     "index.html": "/blog/index.html",
-    "precache-manifest.a2ba8b03e43ea212ddc27634b65f4f8d.js": "/blog/precache-manifest.a2ba8b03e43ea212ddc27634b65f4f8d.js",
+    "precache-manifest.e32427089aa89a6924673470e4e4a272.js": "/blog/precache-manifest.e32427089aa89a6924673470e4e4a272.js",
     "service-worker.js": "/blog/service-worker.js",
     "static/css/2.b0bb7f2c.chunk.css.map": "/blog/static/css/2.b0bb7f2c.chunk.css.map",
-    "static/css/main.fc269bcc.chunk.css.map": "/blog/static/css/main.fc269bcc.chunk.css.map",
+    "static/css/main.5529f2b0.chunk.css.map": "/blog/static/css/main.5529f2b0.chunk.css.map",
+    "static/media/app-2.png": "/blog/static/media/app-2.b3823dea.png",
     "static/media/awslogo.png": "/blog/static/media/awslogo.a9b726c4.png",
     "static/media/bucky.png": "/blog/static/media/bucky.bd0b2dbd.png",
     "static/media/flasklogo.png": "/blog/static/media/flasklogo.ea92008b.png",
     "static/media/logo.svg": "/blog/static/media/logo.25bf045c.svg",
+    "static/media/no-params.png": "/blog/static/media/no-params.4a147248.png",
     "static/media/post.md": "/blog/static/media/post.e6a3be6d.md",
-    "static/media/reactjslogo.png": "/blog/static/media/reactjslogo.82a318cc.png"
+    "static/media/reactjslogo.png": "/blog/static/media/reactjslogo.82a318cc.png",
+    "static/media/url-params.png": "/blog/static/media/url-params.6da06e56.png",
+    "static/media/user-local-store.png": "/blog/static/media/user-local-store.7d30a5d5.png",
+    "static/media/userlocalstorage-2.png": "/blog/static/media/userlocalstorage-2.c68bb8b5.png"
   },
   "entrypoints": [
     "static/js/runtime-main.6448740b.js",
     "static/css/2.b0bb7f2c.chunk.css",
-    "static/js/2.0e6f8da0.chunk.js",
-    "static/css/main.fc269bcc.chunk.css",
-    "static/js/main.a33e8233.chunk.js"
+    "static/js/2.43d332c8.chunk.js",
+    "static/css/main.5529f2b0.chunk.css",
+    "static/js/main.ba80e2db.chunk.js"
   ]
 }
