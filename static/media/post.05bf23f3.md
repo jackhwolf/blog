@@ -62,17 +62,17 @@ interested in the method type, in order to determine what to do with our input. 
   >>> resp = requests.get('http://127.0.0.1:8000/test')
    <Response [200]>
   >>> print(resp.json())
-   {'status': 'success'}
- ```
+   {'status': 'success'}```
  
+
  And a `POST` would look like...
  
+
  >```
   >>> resp = requests.post('http://127.0.0.1:8000/8000/user/jack')
    <Response [200]>
   >>> print(resp.json())
-   {'response': 'True'}
- ```
+   {'response': 'True'}```
  
 # Passing JSON data
 ----
@@ -95,8 +95,7 @@ attributes in our `POST` request. We can do that by
                            json={'username': 'SkippyElvis', 'email': 'a@b.c'})
    <Response [200]>
   >>> print(resp.json())
-   {'response': 'True'}
- ```
+   {'response': 'True'}```
  
 * ### Server-side: `flask.request`
 It's super easy to access the passed JSON data by using `request.get_json(force=True)`. This will
@@ -107,9 +106,7 @@ keep. So, when the client sends a request like the one above, on the server-side
  >```
 data = request.get_json(force=True)
 print(data)
- >>> {'username': 'SkippyElvis', 'email': 'a@b.c'}
-```
-
+ >>> {'username': 'SkippyElvis', 'email': 'a@b.c'}```
  
 # Modifying our UserLocalStorage and API to handle JSON data
 ----
