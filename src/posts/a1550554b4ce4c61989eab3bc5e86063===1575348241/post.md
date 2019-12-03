@@ -17,7 +17,7 @@ To represent a local data store, I just made a small class around a dictionary t
 # Including data and using `flask.request`
 ----
 
- * ## Reminder: a basic route
+## Reminder: a basic route
  > <img style="align: center; width: 400" src="https://github.com/jackhwolf/blog/raw/master/src/posts/a1550554b4ce4c61989eab3bc5e86063===1575348241/no-params.png">
 
 ## A more complex endpoint
@@ -110,7 +110,8 @@ print(data)
  
 # Modifying our UserLocalStorage and API to handle JSON data
 ----
-* ### UserLocalStorage `get` method should return a stringified dictionary of user data, and `add` method should accept a data parameter. It helps to stringify the dictionary to avoid 
+* ### UserLocalStorage `get` method should return a stringified dictionary of user data, and `add` method should accept a data parameter
+It helps to stringify the dictionary to avoid errors from `flask` about not wanting to return objects of type `dict`. 
  > <img style="align: center; width: 400" src="https://github.com/jackhwolf/blog/raw/master/src/posts/a1550554b4ce4c61989eab3bc5e86063===1575348241/userlocalstorage-2.png">
  
 * ### Pass the JSON data from the request into the `UserLocalStorage.add` function
