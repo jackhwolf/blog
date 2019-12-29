@@ -1,4 +1,4 @@
-# Basic Flask #2: Introducing `flask-restplus` and extending our API
+# Basic Flask #3: Introducing `flask-restplus` and extending our API
 Hi! So far, we've made a pretty simple API using a basic `app` object from `flask`. Today
 I would like to introduce you to an awesome `flask` extension that I use almost every
 time I use `flask`. Its called `flask-restplus` and is designed to aid the development
